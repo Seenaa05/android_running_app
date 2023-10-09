@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="352dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="187dp"
+                android:layout_height="195dp"
+                android:layout_marginStart="108dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="108dp"
+                android:foreground="@drawable/running"
+                app:layout_constraintBottom_toTopOf="@+id/button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="188dp"
+                android:layout_height="118dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="57dp"
+                android:onClick="onClickRecord"
+                android:text="RECORD JOURNEY"
+                android:textColor="@android:color/white"
+
+                android:textSize="16sp"
+                app:icon="@android:drawable/ic_media_play"
+                app:iconGravity="textStart"
+                app:iconPadding="20dp"
+                app:iconSize="32dp"
+                app:layout_constraintEnd_toStartOf="@+id/button2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="189dp"
+                android:layout_height="118dp"
+                android:layout_marginTop="224dp"
+                android:layout_marginEnd="4dp"
+                android:onClick="onClickView"
+                android:text="VIEW JOURNEYS"
+                android:textAlignment="center"
+
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:icon="@android:drawable/ic_menu_view"
+                app:iconGravity="textStart"
+                app:iconPadding="20dp"
+                app:iconSize="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="395dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="379dp"
+                android:layout_height="185dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="Weather today: "
+                        android:textAlignment="center"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/weatherDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="TextView"
+                        android:textAlignment="center"
+                        android:textSize="32sp" />
+
+                    <TextView
+                        android:id="@+id/weatherCelsius"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="TextView"
+                        android:textAlignment="center"
+                        android:textSize="44sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="191dp"
+                android:layout_height="116dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginBottom="64dp"
+                android:onClick="onClickStatistics"
+                android:text="STATISTICS"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:icon="@android:drawable/btn_star_big_on"
+                app:iconGravity="textStart"
+                app:iconPadding="20dp"
+                app:iconSize="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

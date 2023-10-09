@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Statistics">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/backButton4"
+            android:layout_width="78dp"
+            android:layout_height="52dp"
+            android:backgroundTint="#00FFFFFF"
+            android:onClick="onClickBack"
+            android:src="@mipmap/back_foreground" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Statistics"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:id="@+id/Statistics_selectDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:text="Select Date"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="506dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/todayDistance"
+                android:layout_width="200dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/timeToday"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Today's distance:"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/Statistics_distanceToday"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0.00 KM"
+                        android:textAlignment="center"
+                        android:textSize="34sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        app:srcCompat="@drawable/distance" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/recordDistance"
+                android:layout_width="200dp"
+                android:layout_height="210dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="14dp"
+                app:layout_constraintStart_toEndOf="@+id/AllTime"
+                app:layout_constraintTop_toBottomOf="@+id/timeToday">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Your record distance:"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/Statistics_recordDistance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0.00 KM"
+                        android:textAlignment="center"
+                        android:textSize="34sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="70dp"
+                        android:layout_height="71dp"
+                        android:paddingTop="10dp"
+                        app:srcCompat="@drawable/medal" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/timeToday"
+                android:layout_width="200dp"
+                android:layout_height="210dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintBottom_toTopOf="@+id/recordDistance"
+                app:layout_constraintStart_toEndOf="@+id/todayDistance"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Time spent running today:"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/Statistics_timeToday"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="00:00:00"
+                        android:textAlignment="center"
+                        android:textSize="34sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="70dp"
+                        android:layout_height="71dp"
+                        android:paddingTop="10dp"
+                        app:srcCompat="@drawable/clock2" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/AllTime"
+                android:layout_width="200dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/recordDistance"
+                app:layout_constraintTop_toBottomOf="@+id/todayDistance">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="All time distance ran: "
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/Statistics_distanceAllTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0.00KM"
+                        android:textAlignment="center"
+                        android:textSize="34sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="70dp"
+                        android:layout_height="71dp"
+                        android:paddingTop="10dp"
+                        app:srcCompat="@drawable/alltime2" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="375dp"
+            android:layout_marginBottom="5dp"
+            tools:layout_editor_absoluteY="8dp"/>
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
